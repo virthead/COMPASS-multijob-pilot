@@ -2201,8 +2201,8 @@ def getNewJob(tofile=True, num_of_job = 300):
             # write the dispatcher exit code to file
             writeDispatcherEC(StatusCode)
 
-            if ret[0]: # non-zero return
-                return None, pUtil.getDispatcherErrorDiag(ret[0])
+#            if ret[0]: # non-zero return
+#                return None, pUtil.getDispatcherErrorDiag(ret[0])
 
             if StatusCode != '0':
                 if len(jobs) == 0:
