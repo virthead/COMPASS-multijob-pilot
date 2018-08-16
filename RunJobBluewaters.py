@@ -823,7 +823,7 @@ if __name__ == "__main__":
     runJob.number_of_threads = 1  # 1 - one thread per task
     runJob.min_walltime =  1080  # min. 2 hour for gap
     runJob.waittime = 5
-    runJob.nodes = 2
+    runJob.nodes = 16
     runJob.partition_comp = ''
     runJob.project_id = "balh"
     runJob.executed_queue = readpar('localqueue')

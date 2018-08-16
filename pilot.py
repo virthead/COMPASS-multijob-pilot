@@ -2387,7 +2387,7 @@ def getJob():
     while int(time.time() - t0) < env['getjobmaxtime']:
         lim_of_job = 1
         if 'HPC_' in pUtil.readpar("catchall"):
-            lim_of_job = 64
+            lim_of_job = 512
         if 'HPC_Titan' in pUtil.readpar("catchall"):
             lim_of_job = 300
             
