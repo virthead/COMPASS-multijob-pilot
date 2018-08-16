@@ -890,7 +890,12 @@ if __name__ == "__main__":
             tolog("!!WARNING!!3000!! %s" % (pilotErrorDiag))
             for j in jobs:
                 runJob.failJob(0, error.ERR_UNKNOWN, job, pilotErrorDiag=pilotErrorDiag)
-            
+        
+        tolog("Setting number of nodes to be requested")
+        runJob.nodes = len(jobs)//runJob.cpu_number_per_node
+        if len(jobs)%runJob.cpu_number_per_node != 0:
+            runJob.nodes = runJob.nodes + 1
+        tolog("Going to request %s nodes" % runJob.nodes)
         
         #runJob.max_nodes = len(jobs)
         # register cleanup function
