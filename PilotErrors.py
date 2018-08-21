@@ -133,6 +133,7 @@ class PilotErrors:
     ERR_CANTCONNECTTOCDB = 1244
     ERR_READCALIBBADLINE = 1245
     ERR_KILLED = 1246
+    ERR_EXITED_WITH_CODE3 = 1247
 
     # internal error codes
     ERR_DDMREG = 1
@@ -269,7 +270,8 @@ class PilotErrors:
         ERR_EMPTYSTRING: "_LEDinSpills empty string from calib file",
         ERR_CANTCONNECTTOCDB: "std::exception: CsEvent::getNextEvent: can't connect to CDB database",
         ERR_READCALIBBADLINE: "Exception in readCalibration(): EC02P1__: InputTiSdepCorr EC02P1__ bad line",
-        ERR_KILLED: "Killed $CORAL/../phast/coral/coral.exe"
+        ERR_KILLED: "Killed $CORAL/../phast/coral/coral.exe",
+        ERR_EXITED_WITH_CODE3: "CORAL exiting with return code -3"
         }
 
     getErrorCodes = [1097, 1099, 1100, 1103, 1107, 1113, 1130, 1145, 1151, 1164, 1167, 1168, 1171, 1175, 1178, 1179, 1180, 1182]
